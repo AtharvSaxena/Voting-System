@@ -93,6 +93,12 @@ h1{
 	outline:none;
 	width:100%;
 	font-size:14px;
+	background:transparent;
+}
+
+/* Fix date input style */
+.sign input[type="date"]{
+	color:#555;
 }
 
 /* BUTTON */
@@ -144,35 +150,47 @@ h1{
 	<h1>Create Account</h1>
 
 	<form>
+
 		<div class="sign">
 			<i class="fa fa-user"></i>
-			<input type="text" placeholder="First Name">
+			<input type="text" placeholder="First Name" required>
 		</div>
 
 		<div class="sign">
 			<i class="fa fa-user"></i>
-			<input type="text" placeholder="Last Name">
+			<input type="text" placeholder="Last Name" required>
 		</div>
 
 		<div class="sign">
 			<i class="fa fa-envelope"></i>
-			<input type="email" placeholder="Email Address">
+			<input type="email" placeholder="Email Address" required>
+		</div>
+
+		<div class="sign">
+			<i class="fa fa-id-card"></i>
+			<input type="text" placeholder="Voter ID" required>
+		</div>
+
+		<div class="sign">
+			<i class="fa fa-calendar"></i>
+			<input type="date" required>
 		</div>
 
 		<div class="sign">
 			<i class="fa fa-lock"></i>
-			<input type="password" placeholder="Password">
+			<input type="password" placeholder="Password" required>
 		</div>
 
 		<div class="sign">
 			<i class="fa fa-lock"></i>
-			<input type="password" placeholder="Confirm Password">
+			<input type="password" placeholder="Confirm Password" required>
 		</div>
 
 		<input type="submit" value="Sign Up" id="btn">
 
 		<br><br>
 		<p>Already have an account? <a href="login.html" id="log">Login</a></p>
+
 	</form>
 </div>
 
