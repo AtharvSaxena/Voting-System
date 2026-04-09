@@ -9,6 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $dob = $_POST['dob'];
     $password = $_POST['password'];
     $confirm = $_POST['confirm_password'];
+    $security_question = $_POST['security_question'];
+    $security_answer = strtolower(trim($_POST['security_answer']));
 
     if ($password !== $confirm) {
         echo "<script>alert('Passwords do not match');</script>";
@@ -16,8 +18,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         $hashed = password_hash($password, PASSWORD_DEFAULT);
 
-        $sql = "INSERT INTO voters (username, email, voter_id, dob, password)
-                VALUES ('$username','$email','$voter_id','$dob','$hashed')";
+        $sql = "INSERT INTO voters (username, email, voter_id, dob, password, security_question, security_answer)
+                VALUES ('$username','$email','$voter_id','$dob','$hashed','$security_question','$security_answer')";
 
         if ($conn->query($sql)) {
             echo "<script>alert('Registered Successfully'); window.location='voterlog.php';</script>";
@@ -81,6 +83,22 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <div class="sign">
                 <i class="fa fa-lock"></i>
                 <input type="password" name="confirm_password" placeholder="Confirm Password" required>
+            </div>
+
+            <div class="sign">
+                <i class="fa fa-question-circle"></i>
+                <select name="security_question" required style="border:none; outline:none; width:100%; background:transparent;">
+                    <option value="">Choose Security Question</option>
+                    <option value="food">Favourite Food Name?</option>
+                    <option value="pet">First Pet Name?</option>
+                    <option value="school">First School Name?</option>
+                    <option value="teacher">Favourite Teacher Name?</option>
+                </select>
+            </div>
+
+            <div class="sign">
+                <i class="fa fa-key"></i>
+                <input type="text" name="security_answer" placeholder="Security Answer" required>
             </div>
 
             <input type="submit" value="Register" id="btn">

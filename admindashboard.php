@@ -44,7 +44,7 @@ if(isset($_GET['remove_voter'])){
 
         <div>
             <a href="admindashboard.php" class="anchor">Dashboard</a>
-            <a href="about.html" class="anchor">About</a>
+            <a href="about.php" class="anchor">About</a>
             <a href="result.php" class="anchor">Elections</a>
             <a href="logout.php" class="anchor">Logout</a>
         </div>

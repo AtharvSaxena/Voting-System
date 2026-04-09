@@ -22,7 +22,7 @@
       <div class="link">
         <a href="index.php" class="anchor">Home</a>
         <a href="result.php" class="anchor">Elections</a>
-        <a href="about.html" class="anchor">About</a>
+        <a href="about.php" class="anchor">About</a>
 
         <!-- LOGIN DROPDOWN -->
         <div class="dropdown">

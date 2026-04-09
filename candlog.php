@@ -77,7 +77,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <br><br>
             <label>Don't have an account? <a href="candsign.php" id="log">Sign Up</a></label>
             <br>
-            <label>Forgot Password? <a href="#" id="log">Reset</a></label>
+            <label>Forgot Password? <a href="forget.php?role=candidate" id="log">Reset</a></label>
         </form>
     </div>
 

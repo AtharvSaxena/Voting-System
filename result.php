@@ -53,9 +53,8 @@ $total = $conn->query("SELECT COUNT(*) as t FROM votes")->fetch_assoc()['t'];
 
       <div>
         <a href="<?= $dashboard ?>" class="anchor">Dashboard</a>
-        <a href="about.html" class="anchor">About</a>
+        <a href="about.php" class="anchor">About</a>
         <a href="result.php" class="anchor">Elections</a>
-        <a href="logout.php" class="anchor">Logout</a>
       </div>
     </div>
 

@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="submit" value="Login" id="btn">
 
             <br><br>
-            <label>Forgot Password? <a href="#" id="log">Reset</a></label>
+            <label>Forgot Password? <a href="forget.php?role=admin" id="log">Reset</a></label>
         </form>
     </div>
 

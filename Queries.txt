@@ -1,0 +1,76 @@
+-- ==========================================
+-- CREATE DATABASE
+-- ==========================================
+CREATE DATABASE IF NOT EXISTS user_system;
+USE user_system;
+
+
+-- ==========================================
+-- ADMINS TABLE
+-- ==========================================
+CREATE TABLE admins (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    admin_id VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    security_question VARCHAR(100),
+    security_answer VARCHAR(255)
+);
+
+
+-- ==========================================
+-- VOTERS TABLE
+-- ==========================================
+CREATE TABLE voters (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    voter_id VARCHAR(50) NOT NULL UNIQUE,
+    dob DATE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    security_question VARCHAR(100),
+    security_answer VARCHAR(255)
+);
+
+
+-- ==========================================
+-- CANDIDATES TABLE
+-- ==========================================
+CREATE TABLE candidates (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    username VARCHAR(100) NOT NULL UNIQUE,
+    email VARCHAR(150) NOT NULL UNIQUE,
+    voter_id VARCHAR(50) NOT NULL UNIQUE,
+    dob DATE NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    party VARCHAR(150) NOT NULL,
+    security_question VARCHAR(100),
+    security_answer VARCHAR(255)
+);
+
+
+-- ==========================================
+-- VOTES TABLE
+-- ==========================================
+CREATE TABLE votes (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    voter_id INT NOT NULL,
+    candidate_id INT NOT NULL,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    UNIQUE(voter_id)
+);
+
+
+-- ==========================================
+-- ADMIN INSERT
+-- ==========================================
+INSERT INTO admins 
+(username, admin_id, password, security_question, security_answer)
+VALUES
+(
+    'admin',
+    'AD01',
+    '$2y$10$CwN1lIGR1/FTNBBN75/aHuOZOtktUY/FiTkPmyQy5P9sFzWPuJRCG',
+    'teacher',
+    'sharma'
+);

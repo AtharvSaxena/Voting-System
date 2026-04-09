@@ -54,7 +54,7 @@ $candidates = $conn->query("SELECT * FROM candidates");
 
         <div>
             <a href="voterdashboard.php" class="anchor">Dashboard</a>
-            <a href="about.html" class="anchor">About</a>
+            <a href="about.php" class="anchor">About</a>
             <a href="result.php" class="anchor">Elections</a>
             <a href="logout.php" class="anchor">Logout</a>
         </div>
