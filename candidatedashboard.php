@@ -51,6 +51,10 @@ $result = $conn->query("
             <a href="result.php" class="anchor">Elections</a>
             <a href="logout.php" class="anchor">Logout</a>
         </div>
+
+        <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+            🌙 Dark
+        </button>
     </div>
 
     <!-- DASHBOARD -->
@@ -75,6 +79,6 @@ $result = $conn->query("
         </div>
 
     </div>
-
+    <script src="script.js"></script>
 </body>
 </html>

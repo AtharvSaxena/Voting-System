@@ -56,6 +56,9 @@ $total = $conn->query("SELECT COUNT(*) as t FROM votes")->fetch_assoc()['t'];
         <a href="about.php" class="anchor">About</a>
         <a href="result.php" class="anchor">Elections</a>
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+        🌙 Dark
+      </button>
     </div>
 
     <!-- RESULTS -->
@@ -88,5 +91,6 @@ $total = $conn->query("SELECT COUNT(*) as t FROM votes")->fetch_assoc()['t'];
         </table>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>

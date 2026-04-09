@@ -162,6 +162,6 @@ if (isset($_POST['reset_password'])) {
     </div>
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

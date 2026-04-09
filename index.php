@@ -43,6 +43,9 @@
           </div>
         </div>
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+          🌙 Dark
+      </button>
     </div>
 
     <!-- HERO -->
@@ -107,5 +110,7 @@
     <div class="footer">
       <p>© 2026 Online Voting System | All Rights Reserved</p>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>

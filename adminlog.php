@@ -56,7 +56,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         <form method="POST" action="">
             <div class="sign">
-                <i class="fa fa-user-shield"></i>
+                <i class="fa fa-id-card"></i>
                 <input type="text" name="username" placeholder="Admin Username" required>
             </div>
 
@@ -73,6 +73,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
 </div>
-
+<script src="script.js"></script>
 </body>
 </html>

@@ -43,7 +43,11 @@ if(isset($_SESSION['role'])){
         <a href="<?= $dashboard ?>" class="anchor">Dashboard</a>
         <a href="about.php" class="anchor">About</a>
         <a href="result.php" class="anchor">Elections</a>
+        
       </div>
+      <button class="theme-toggle" onclick="toggleTheme()" id="themeBtn">
+        🌙 Dark
+      </button>
     </div>
 
     <!-- INTRO -->
@@ -199,5 +203,6 @@ if(isset($_SESSION['role'])){
         </div>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
